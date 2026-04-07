@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>行为日志记录器</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>📋 行为日志记录器</h2>
+    <div id="consent-panel">
+      <h3>知情同意书</h3>
+      <p>本研究旨在了解用户的网页浏览习惯。我们将记录：</p>
+      <ul>
+        <li>您访问的网址（仅域名和路径，不记录敏感参数）</li>
+        <li>您点击的元素类型（如按钮、链接）</li>
+      </ul>
+      <p><strong>所有数据仅存储在您的本地电脑，您可以随时导出并删除。</strong> 不会上传任何服务器。</p>
+      <button id="consent-btn">✅ 我同意并开始记录</button>
+    </div>
+
+    <div id="data-panel" style="display: none;">
+      <p>当前已记录 <span id="log-count">0</span> 条行为。</p>
+      <button id="export-json">📄 导出 JSON</button>
+      <button id="export-csv">📊 导出 CSV</button>
+      <button id="clear-data">🗑️ 清空所有数据</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
